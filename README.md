@@ -28,8 +28,9 @@ This architecture is specifically designed to fuse distinctive features extracte
 
 ## Results
 
-
-
+<p align="center">
+  <img src="https://github.com/dot0-0/Speech-Emotion-Recognition/blob/main/ConfusionMatrix.png" alt="Alt text" width="300"> <img src="https://github.com/dot0-0/Speech-Emotion-Recognition/blob/main/Correlation.png" alt="Alt text" height="217.7"> 
+</p>
 
 ## Requirements
 
