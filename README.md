@@ -16,15 +16,29 @@ RAVDESS Dataset - [RAVDESS Dataset](https://zenodo.org/records/1188976)
 
 ## Network Architecture
 
-The neural network architecture comprises two primary blocks.
+This architecture is designed for emotion recognition and consists of the following components:
 
-The first block constitutes a sequence of convolutional operations, initiating with a 2D convolutional layer producing 16 output channels. This layer is followed by batch normalization for stable training, ReLU activation for introducing non-linearity, max-pooling (2x2) to downsample the feature maps, and a dropout layer with a probability of 0.3 to prevent overfitting.
+Convolutional Block:
 
-The second block integrates a transformer mechanism that involves multiple TransformerEncoderLayers organized within a TransformerEncoder module. This transformer block serves to reduce the input data's dimensions before undergoing transformations across multiple layers. The resulting embeddings derived from both the convolutional and transformer blocks are concatenated to combine the distinctive features.
+It processes 2D input data, likely spectrograms or images with a single channel.
+The block includes multiple convolutional layers followed by batch normalization, ReLU activation, max-pooling, and dropout. Each convolutional layer captures different features from the input.
+Convolutions are performed using layers with different channel sizes, 3x3 kernel sizes, padding for spatial dimensions, and ReLU activation functions. Max-pooling reduces spatial dimensions.
+Transformer Block:
 
-Subsequently, the concatenated embeddings undergo linear transformation, followed by a dropout with a probability of 0.3 to further regularize the model. Finally, a softmax activation function generates class probabilities across the specified range of emotions.
+After convolution, a MaxPooling2D layer reduces dimensions further.
+The data is reshaped to fit the transformer's required input shape (time, batch, embedding).
+The nn.TransformerEncoder is used with specific parameters for layers, input dimension, attention heads, feedforward network dimension, dropout rate, and activation function.
+The transformer learns relationships and dependencies within the input sequence.
+Concatenation and Final Layers:
 
-This architecture is specifically designed to fuse distinctive features extracted from convolutional and transformer-based representations, thereby facilitating the prediction of emotions based on the input data.
+The outputs from the convolutional and transformer blocks are concatenated.
+The combined representation goes through a linear layer to map it to the output dimension representing different emotions.
+Dropout is applied before the final softmax activation.
+The final output includes both logits and softmax probabilities for each emotion class.
+Forward Function:
+
+The input tensor goes through both the convolutional and transformer blocks.
+The outputs are concatenated and passed through the linear layer with dropout, followed by a softmax activation to generate the final predictions.
 
 ## Results
 
