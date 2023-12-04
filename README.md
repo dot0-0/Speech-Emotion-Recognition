@@ -40,4 +40,4 @@ Pytorch
 
 ## References
 
-[https://github.com/jindongwang/Deep-learning-activity-recognition.git](https://github.com/jindongwang/Deep-learning-activity-recognition.git)
+[https://github.com/IliaZenkov/transformer-cnn-emotion-recognition](https://github.com/IliaZenkov/transformer-cnn-emotion-recognition)
