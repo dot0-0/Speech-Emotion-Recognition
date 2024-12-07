@@ -7,9 +7,6 @@
 - [Results](#results)
 - [Requirements](#requirements)
 
-## About
-Recent years have seen a rise in interest in HAR research due to the rapid advancement of wearable sensor technology and the widespread availability of smart devices, such as gyroscopes and accelerometers built into smartphones. The methodology we present in this study automatically extracts spatial and temporal elements from smart device sensory data for the purpose of classifying HAR data. The method used to accomplish this is a hybrid supervised learning architecture made up of an LSTM (Long Short Term Memory) and a CNN (Convolutional Neural Network).
-
 ## Dataset 
 
 RAVDESS Dataset - [RAVDESS Dataset](https://zenodo.org/records/1188976)
